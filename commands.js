@@ -25,6 +25,13 @@ const TEST_COMMAND = {
   integration_types: [0, 1],
   contexts: [0, 1, 2],
 };
+const TEST1_COMMAND = {
+    name: 'test1',
+    description: 'Basic command',
+    type: 1,
+    integration_types: [0, 1],
+    contexts: [0, 1, 2],
+};
 
 // Command containing options
 const CHALLENGE_COMMAND = {
@@ -44,6 +51,32 @@ const CHALLENGE_COMMAND = {
   contexts: [0, 2],
 };
 
-const ALL_COMMANDS = [TEST_COMMAND, CHALLENGE_COMMAND];
+const CATIMAGE_COMMAND = {
+    name: 'catimage',
+    description: 'post image of a cat',
+    options: [
+        {
+            type: 3,
+            name: 'prompt',
+            description: 'find an image or gif',
+            required: true,
+        },
+    ],
+    type: 1,
+    integration_types: [0, 1],
+    contexts: [0, 2],
+}
+
+const CATTEST_COMMAND = {
+    name: 'catimage2',
+    description: 'Basic command',
+    type: 1,
+    integration_types: [0, 1],
+    contexts: [0, 1, 2],
+};
+
+const ALL_COMMANDS = [
+    TEST_COMMAND, CHALLENGE_COMMAND, CATIMAGE_COMMAND, CATTEST_COMMAND, TEST1_COMMAND
+];
 
 InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);

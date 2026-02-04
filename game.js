@@ -78,6 +78,12 @@ const RPSChoices = {
     cowboy: 'gives papercut to',
     rock: 'covers',
   },
+  challenge: {
+    description: 'test',
+    virus: 'test',
+    cowboy: 'test',
+    rock: 'test',
+  },
 };
 
 export function getRPSChoices() {
